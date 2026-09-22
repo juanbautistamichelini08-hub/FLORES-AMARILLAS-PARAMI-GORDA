@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="stemGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4e8c3b"/>
+      <stop offset="100%" stop-color="#2d5e23"/>
+    </linearGradient>
+    <linearGradient id="petalGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff275"/>
+      <stop offset="60%" stop-color="#ffcc00"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="petalShadow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+  <!-- Stem and Leaves -->
+  <path d="M32 36 Q32 50 32 60" stroke="url(#stemGrad)" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <path d="M32 48 Q20 44 14 36 Q22 36 32 45" fill="#4e8c3b"/>
+  <path d="M32 45 Q44 40 50 32 Q42 33 32 42" fill="#5b9e45"/>
+  
+  <!-- Back / Center Petal -->
+  <path d="M32 10 C27 10 24 22 32 36 C40 22 37 10 32 10 Z" fill="url(#petalShadow)"/>
+  
+  <!-- Left Petal -->
+  <path d="M32 36 C22 34 16 22 22 14 C27 20 28 30 32 36 Z" fill="url(#petalGrad)"/>
+  
+  <!-- Right Petal -->
+  <path d="M32 36 C42 34 48 22 42 14 C37 20 36 30 32 36 Z" fill="url(#petalGrad)"/>
+
+  <!-- Center Glow -->
+  <circle cx="32" cy="22" r="3" fill="#ffffff" opacity="0.6"/>
+</svg>
