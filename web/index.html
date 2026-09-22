@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Para Vos Gordita 💛</title>
+  <meta name="description"
+    content="Una experiencia cinematográfica e íntima entre el mar, el atardecer y un campo infinito de flores amarillas.">
+
+  <!-- Open Graph / Meta para compartir -->
+  <meta property="og:title" content="Para Vos 💛">
+  <meta property="og:description"
+    content="Porque hay flores que duran un momento, pero lo que siento por vos quiero que dure mucho más.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="./assets/images/tulip.svg">
+
+  <!-- Google Fonts de Alta Estética Editorial -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400;500&family=Playfair+Display:ital,wght@0,600;1,400;1,600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <!-- Cortina inicial cinematográfica -->
+  <div id="cinematic-curtain" class="cinematic-curtain" aria-hidden="true"></div>
+
+  <!-- Contenedor del Canvas Principal (Cielo, Sol, Mar, Tulipanes y Partículas) -->
+  <div class="canvas-container" id="canvas-container">
+    <canvas id="scene-canvas"></canvas>
+  </div>
+
+  <!-- Capa de viñeta cinematográfica muy sutil en bordes -->
+  <div class="vignette-overlay" aria-hidden="true"></div>
+
+  <!-- Controlador flotante de música -->
+  <div class="audio-control-wrapper">
+    <button id="audio-toggle" class="audio-toggle-btn" aria-label="Control de música" title="Música ambiental">
+      <div class="audio-bars" aria-hidden="true">
+        <span class="bar bar-1"></span>
+        <span class="bar bar-2"></span>
+        <span class="bar bar-3"></span>
+      </div>
+      <span id="audio-label" class="audio-label">▶ Música</span>
+    </button>
+  </div>
+
+  <!-- Contenedor de la Experiencia (situado en el cielo, sin tapar las flores) -->
+  <main class="experience-container">
+
+    <!-- Escena 1: Encuentro inicial en el cielo -->
+    <section id="scene-1" class="scene scene-1 active" aria-labelledby="scene1-title">
+      <div class="sky-header-card" id="card-1">
+        <span class="badge-subtitle">UN DETALLE PARA MI GORDITA</span>
+        <h1 id="scene1-title" class="main-title">Para vos <span class="heart-symbol">💛</span></h1>
+
+        <p class="scene-quote">
+          Porque las flores duran un poco,<br>
+          pero lo que siento por vos quiero que dure mucho más.
+        </p>
+
+        <div class="actions-wrapper">
+          <button id="btn-surprise" class="btn-golden" type="button">
+            <span>Tengo algo para vos</span>
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="mobile-hint" id="mobile-hint" aria-hidden="true">
+          <span>Deslizá para continuar ↓</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Escena 2: Revelación poética -->
+    <section id="scene-2" class="scene scene-2" aria-live="polite">
+      <div class="narrative-wrapper" id="narrative-wrapper">
+
+        <!-- Fase 1 -->
+        <div class="narrative-step step-1" id="step-1">
+          <p class="poetic-line">No pude verte hoy pero aun asi...</p>
+        </div>
+
+        <!-- Fase 2 -->
+        <div class="narrative-step step-2" id="step-2">
+          <p class="poetic-line accent-light">Te regalo este detallito chiquito pero importante para mi</p>
+        </div>
+
+        <!-- Fase 3: Mensaje Principal de Amor -->
+        <div class="narrative-step step-3" id="step-3">
+          <div class="climax-card">
+            <span class="climax-sparkle" aria-hidden="true">✨</span>
+            <h2 class="climax-title">Aca tenes tus flores amarillas, mi amor <span class="heart-symbol">💛</span></h2>
+            <p class="climax-subtext">
+              Que estos tulipanes te recuerden siempre lo especial, brillante y hermosa que
+              sos en mi vida . (Y que te den suerte para tu parcial el sabado mi gordita inteligente)
+            </p>
+
+            <div class="climax-actions">
+              <button id="btn-replay" class="btn-ghost" type="button">
+                <span>Volver a contemplar ↺</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Audio Element Oculto -->
+  <audio id="bg-audio" preload="auto" loop>
+    <source src="./assets/audio/music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Scripts -->
+  <script src="./js/audio.js"></script>
+  <script src="./js/scene.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+
+</html>
